@@ -2,18 +2,18 @@ package com.company;
 
 public class Employee {
 
-    private int payment;
+    private int paymentType;
     private double salary;
     private int employeeType;
 
-    public Employee (int payment, double salary, int employeeType) {
+    public Employee (int paymentType, double salary, int employeeType) {
         this.salary = salary;
 
-        if(payment == 1) {
+        if(paymentType == 1) {
 
-        } else if(payment == 2) {
+        } else if(paymentType == 2) {
 
-        } else if(payment == 3) {
+        } else if(paymentType == 3) {
 
         } else {
             System.out.println("Erro... Método não Aceito.");
@@ -30,11 +30,11 @@ public class Employee {
     }
 
     public int getPayment() {
-        return payment;
+        return paymentType;
     }
 
     public void setPayment(int payment) {
-        this.payment = payment;
+        this.paymentType = payment;
     }
 
     public double getSalary() {
