@@ -2,54 +2,47 @@ package com.company;
 
 public class Employee {
 
-    private int paymentType;
-    private double salary;
-    private int employeeType;
+    private String name;
+    private String cpf;
+    private int employeeId;
 
-    public Employee (int paymentType, double salary, int employeeType) {
-        this.salary = salary;
 
-        if(paymentType == 1) {
+    public Employee (String name, String cpf, int employeeId) {
 
-        } else if(paymentType == 2) {
-
-        } else if(paymentType == 3) {
-
-        } else {
-            System.out.println("Erro... Método não Aceito.");
-        }
-        if(employeeType == 1) {
-
-        } else if(employeeType == 2) {
-
-        } else if(employeeType == 3) {
+        if(validadeData(name, cpf) == true) {
+            this.name = name;
+            this.cpf = cpf;
+            this.employeeId = employeeId;
+            System.out.println("Sucesso em Salvar os Dados");
 
         } else {
-            System.out.println("Erro... Tipo de Empregado não Aceito.");
+            System.out.println("Erro na Verificação dos Dados do Empregado");
         }
+
+    }
+    public boolean validadeData (String name, String cpf) {
+        int contadorCpf = 0;
+
+        for(int i = 0; i < name.length(); i++) {
+            if (Character.isDigit(name.charAt(i)) == true) {
+                System.out.println("Erro na Validação do Nome !!! Possui Números");
+                return false;
+            }
+        }
+        for(int i = 0; i < cpf.length(); i++) {
+            if (Character.isLetter(cpf.charAt(i)) == true || cpf.charAt(i) == ' ') {
+                System.out.println("Erro na Validação do CPF !!! Possui Letras ou Espaços Vazios");
+                return false;
+            }
+            contadorCpf++;
+        }
+        if(contadorCpf != 11) {
+            return false;
+        }
+        return true;
+    }
+    public String printEmployee(Employee empregado) {
+        return "Name: " + this.name + "\ncpf: " + this.cpf;
     }
 
-    public int getPayment() {
-        return paymentType;
-    }
-
-    public void setPayment(int payment) {
-        this.paymentType = payment;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public int getEmployeeType() {
-        return employeeType;
-    }
-
-    public void setEmployeeType(int employeeType) {
-        this.employeeType = employeeType;
-    }
 }
