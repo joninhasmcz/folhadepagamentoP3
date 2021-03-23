@@ -5,14 +5,16 @@ public class Employee {
     private String name;
     private String cpf;
     private int employeeId;
+    private String address;
 
 
-    public Employee (String name, String cpf, int employeeId) {
+    public Employee (String name, String cpf, int employeeId, String address) {
 
-        if(validadeData(name, cpf) == true) {
+        if(validateData(name, cpf) == true) {
             this.name = name;
             this.cpf = cpf;
             this.employeeId = employeeId;
+            this.address = address;
             System.out.println("Sucesso em Salvar os Dados");
 
         } else {
@@ -20,7 +22,7 @@ public class Employee {
         }
 
     }
-    public boolean validadeData (String name, String cpf) {
+    public boolean validateData (String name, String cpf) {
         int contadorCpf = 0;
 
         for(int i = 0; i < name.length(); i++) {
@@ -45,4 +47,35 @@ public class Employee {
         return "Name: " + this.name + "\ncpf: " + this.cpf;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
