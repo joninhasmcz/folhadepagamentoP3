@@ -17,8 +17,9 @@ public class Main {
         if(op == 1) { */
 
 
-        Employee empregado1 = new Employee("Jonas", "11315461480", contEmployee, "Travessa Maria Erivânia NM 5/" );
-        System.out.println(empregado1.printEmployee(empregado1));
+        Employee hourly1 = new Hourly();
+        hourly1.setName("Jonas");
+        hourly1.getName();
 
 
 

@@ -8,20 +8,6 @@ public class Employee {
     private String address;
 
 
-    public Employee (String name, String cpf, int employeeId, String address) {
-
-        if(validateData(name, cpf) == true) {
-            this.name = name;
-            this.cpf = cpf;
-            this.employeeId = employeeId;
-            this.address = address;
-            System.out.println("Sucesso em Salvar os Dados");
-
-        } else {
-            System.out.println("Erro na Verificação dos Dados do Empregado");
-        }
-
-    }
     public boolean validateData (String name, String cpf) {
         int contadorCpf = 0;
 
@@ -46,7 +32,6 @@ public class Employee {
     public String printEmployee(Employee empregado) {
         return "Name: " + this.name + "\ncpf: " + this.cpf;
     }
-
     public String getName() {
         return name;
     }
