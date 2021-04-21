@@ -1,4 +1,4 @@
-package com.company;
+package classJava;
 import java.util.Scanner;
 
 public class Main {
@@ -17,7 +17,7 @@ public class Main {
         if(op == 1) { */
 
 
-        Employee hourly1 = new Hourly();
+        Employee hourly1 = new Hourly(54);
         hourly1.setName("Jonas");
         hourly1.getName();
 

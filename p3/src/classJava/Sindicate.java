@@ -1,6 +1,7 @@
-package com.company;
+package classJava;
 
 public class Sindicate {
+
     private String name;
     private String participants; // ARRAY
     private double cashRegister;
