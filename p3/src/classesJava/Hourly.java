@@ -1,4 +1,4 @@
-package classJava;
+package classesJava;
 
 public class Hourly extends Employee {
 

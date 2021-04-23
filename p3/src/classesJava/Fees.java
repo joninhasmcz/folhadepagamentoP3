@@ -1,8 +1,8 @@
-package classJava;
+package classesJava;
 
 public class Fees {
 
-    double value;
+    private double value;
 
     public void initTaxes(double value) {
         this.value = value;
