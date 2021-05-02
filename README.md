@@ -18,3 +18,24 @@ o Podem pedir depósito em conta bancária.
 • Alguns empregados pertencem ao sindicato (para simplificar, só há um possível sindicato).  O sindicato cobra uma taxa mensal do empregado e essa taxa pode variar entre  empregados. A taxa sindical é deduzida do salário. Além do mais, o sindicato pode  ocasionalmente cobrar taxas de serviços adicionais a um empregado. Tais taxas de serviço  são submetidas pelo sindicato mensalmente e devem ser deduzidas do próximo  contracheque do empregado. A identificação do empregado no sindicato não é a mesma da  identificação no sistema de folha de pagamento.  
 
 • A folha de pagamento é rodada todo dia e deve pagar os empregados cujos salários vencem  naquele dia. O sistema receberá a data até a qual o pagamento deve ser feito e calculará o  pagamento para cada empregado desde a última vez em que este foi pago.
+
+<h2> Code Smells </h2>
+
+Long Method: 
+
+a. The size of the parameter list 
+b. You are getting several values from an object and passing these values as parameters in a method call 
+c. You have a group of parameters that naturally go together 
+Data Clumps 1.4 A method is trying to do too much 
+d. The amount of switch statement for dispatching and handling request 
+e. The amount of switch statement to gather data from numerous classes with different interfaces
+
+Large Class: Fields and methods
+
+Shotgun Surgery: When every time you make a kind of change, you have to make a lot of Little changes to a lot of different classes
+
+Feature Envy: A method that seems more interested in a class other than the one it actually is in.
+
+Lazy Class: A class that is not doing enough to pay for itself.
+
+Message Chains: Example: object.getE().getD().getC().getB().getA().getValue();
