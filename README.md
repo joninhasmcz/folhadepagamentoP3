@@ -39,3 +39,28 @@ Feature Envy: A method that seems more interested in a class other than the one 
 Lazy Class: A class that is not doing enough to pay for itself.
 
 Message Chains: Example: object.getE().getD().getC().getB().getA().getValue();
+
+
+<h1> Folha de Pagamento Refatorado </h1>
+
+<h2> Padrões Utilizados: </h2>
+
+<h3>1. Facade</h3>
+
+Oferecer uma interface única para um conjunto de interfaces de um subsistema. Facade define uma interface de nível mais elevado que torna o subsistema mais fácil de usar.
+
+<b>Classe: PayrollFacade;</b>
+
+<h3>2. Singleton</h3>
+
+Garantir que uma classe só tenha uma única instância, e prover um ponto de acesso global a ela.
+
+<b>Classes: BancoDadosSingleton, CalendarioSingleton</b>
+
+<h3>3. Template Method</h3>
+
+Definir o esqueleto de um algoritmo dentro de uma operação, deixando alguns passos a serem preenchidos pelas subclasses. Template Method permite que suas subclasses redefinam certos passos de um algoritmo sem mudar sua estrutura.
+
+<b>Classes: Empregado -> Assalariado, Comissionado, Horista</b>
+
+
