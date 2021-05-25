@@ -40,7 +40,7 @@ public class Hourly extends Employee{
         System.out.println("Cartão de Ponto do Empregado resgitrado com Sucesso!\n");
     }
 
-    public static double calculateSalary(double salaryHour, int entrance, int exit) {
+    public static double calculateSalary (double salaryHour, int entrance, int exit) {
         double salary;
 
         int workHour = exit - entrance;
